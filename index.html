@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title> Zeonify | Barkhurdar Production </title>
+    <style>
+        html,
+        body {
+            background-color: black;
+        }
+    </style>
+    <style>
+        html,
+        body {
+            background-color: black;
+        }
+
+        #changing-text {
+            transition: opacity 0.4s ease-in-out;
+            display: inline-block;
+        }
+    </style>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Vertical Guide / Ribbon -->
+    <div class="ribbon-container">
+        <!-- Winding Ribbon Path (Zigzag) -->
+        <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="top:0; left:0;">
+            <!-- Complex Zigzag Path covering 0-100vw -->
+            <path id="ribbon-path"
+                d="M-100,0 Q50,200 200,400 T500,800 T800,1200 T200,1600 T-100,2000 T200,2400 T800,2800 T1200,3200 T500,3600 T-100,4000"
+                fill="none" stroke="url(#ribbon-gradient)" stroke-width="20" stroke-linecap="round"
+                style="filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));" />
+            <defs>
+                <linearGradient id="ribbon-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="1" />
+                    <stop offset="25%" stop-color="#8b5cf6" stop-opacity="1" />
+                    <stop offset="50%" stop-color="#ec4899" stop-opacity="1" />
+                    <stop offset="75%" stop-color="#8b5cf6" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+
+    <!-- Background Gradients -->
+    <div class="fixed w-full h-full z-10 pointer-events-none" style="top:0; left:0; z-index:-1;">
+        <div class="absolute"
+            style="top:-10%; left:-10%; width:40%; height:40%; background:rgba(14,165,233,0.1); border-radius:50%; filter:blur(120px); animation: pulse-slow 4s infinite;">
+        </div>
+        <div class="absolute"
+            style="bottom:-10%; right:-10%; width:40%; height:40%; background:rgba(139,92,246,0.1); border-radius:50%; filter:blur(120px); animation: pulse-slow 4s infinite;">
+        </div>
+    </div>
+    <div class="header-wrapper">
+        <!-- Logo LEFT -->
+        <a href="index.html" class="brand-logo-link">
+            <img src="new logo.png" alt="Zeonify" class="brand-logo-img">
+            <span class="brand-logo-text">Zeonify</span>
+        </a>
+
+        <!-- CTA RIGHT -->
+        <a href="contact.html" class="cta-header-link">
+            Get Free Consultation →
+        </a>
+    </div>
+
+
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="w-full h-full flex items-center justify-center">
+            <!-- Links -->
+            <div class="nav-links no-scrollbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <!-- Animated Gradient Background -->
+        <div class="absolute w-full h-full -z-10 overflow-hidden" style="top:0; left:0;">
+            <div class="liquid-flow"></div>
+        </div>
+
+        <div class="container relative z-10 hero-content"> <!-- Added relative z-10 to ensure text is selectable -->
+            <!-- banner -->
+            <div class="hero-badge hero-badge-container">
+                <span
+                    style="width:0.5rem; height:0.5rem; border-radius:50%; background-color:var(--color-brand-primary); display:inline-block;">
+                </span>
+                <span> Barkhurdar Production </span>
+            </div>
+
+            <h1 class="hero-title hero-title-responsive">
+                Presence That <br />
+                <span class="hero-gradient-text hero-text-huge" id="changing-text">
+                    Performs
+                </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="hero-desc hero-desc-responsive">
+                We help brands build a powerful digital presence and turn visibility into measurable growth.
+            </p>
+
+
+            <!-- CTAs -->
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary">
+                    Start Your Project
+                </a>
+
+                <a href="work.html" class="btn-glass group">
+                    <span>View Our Work</span>
+                    <span style="transition: transform 0.2s;" class="group-hover:translate-x-1">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About & Services Preview -->
+    <section id="features" class="section-py relative z-10" style="scroll-margin-top: 6rem;">
+        <div class="container">
+            <div class="text-center md:text-left" style="margin-bottom: 5rem;">
+                <h2 class="section-title">Our Core Services</h2>
+                <div
+                    style="width: 5rem; height: 0.25rem; background-color: var(--color-brand-primary); border-radius: 9999px; margin: 0 auto;">
+                </div>
+                <p class="text-gray-400" style="margin-top: 1rem; max-width: 42rem;">Comprehensive solutions designed
+                    for scalable growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1. Brand Strategy -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=brand'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>⚡</span>
+                    </div>
+                    <h3 class="card-title">Brand Strategy</h3>
+                    <p class="card-desc">Position your brand to lead the market with clear identity and purpose.</p>
+                    <span class="link-action">View Details →</span>
+                </div>
+
+                <!-- 2. Social Media -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=social'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>📱</span>
+                    </div>
+                    <h3 class="card-title">Social Media</h3>
+                    <p class="card-desc">Data-backed social campaigns that grow communities and drive engagement.</p>
+                    <span class="link-action" style="color:#a78bfa;">View Details →</span>
+                </div>
+
+                <!-- 3. Performance Marketing -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=performance'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>📈</span>
+                    </div>
+                    <h3 class="card-title">Performance Marketing</h3>
+                    <p class="card-desc">PPC and Paid Social campaigns optimized for maximum ROAS.</p>
+                    <span class="link-action" style="color:#4ade80;">View Details →</span>
+                </div>
+
+                <!-- 4. SEO -->
+                <div class="spotlight-card glass-card group" onclick="window.location.href='service-detail.html?id=seo'"
+                    style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>🔍</span>
+                    </div>
+                    <h3 class="card-title">SEO</h3>
+                    <p class="card-desc">Technical and content-driven strategies to secure top rankings.</p>
+                    <span class="link-action">View Details →</span>
+                </div>
+
+                <!-- 5. Website Dev -->
+                <div class="spotlight-card glass-card group" onclick="window.location.href='service-detail.html?id=web'"
+                    style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>💻</span>
+                    </div>
+                    <h3 class="card-title">Website Development</h3>
+                    <p class="card-desc">Custom developed, high-converting websites built on modern stacks.</p>
+                    <span class="link-action" style="color:var(--color-brand-secondary);">View Details →</span>
+                </div>
+
+                <!-- 6. Video -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=video'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>🎥</span>
+                    </div>
+                    <h3 class="card-title">Video Production</h3>
+                    <p class="card-desc">Commercials, explainers, and social shorts produced with cinematic quality.</p>
+                    <span class="link-action" style="color:var(--color-brand-accent);">View Details →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section
+        style="padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); position: relative; z-index: 10;">
+        <div class="container text-center">
+            <p
+                style="font-size: 0.875rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2rem;">
+                Trusted by 50+ Brands</p>
+            <div class="flex justify-center flex-wrap gap-8 md:gap-20"
+                style="opacity: 0.6; margin-bottom: 3rem; filter: grayscale(100%); transition: filter 0.3s;">
+                <!-- Logos -->
+                <div class="flex items-center gap-2">
+                    <img src="/comp_logo.jpg" alt="Company Logo" style="width: 5rem;">
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="/vite.svg" alt="Vite Logo" style="width: 2.5rem;">
+                    <span class="text-xl font-bold">Vite</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="/comp_logo.jpg" alt="Company Logo" style="width: 5rem;">
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="/src/javascript.svg" alt="JS Logo" style="width: 2.5rem;">
+                    <span class="text-xl font-bold">JS</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div style="padding: 1rem;">
+                    <div class="text-white font-bold" style="font-size: 2.25rem; margin-bottom: 0.5rem;">100+</div>
+                    <div class="text-gray-400">Campaigns Executed</div>
+                </div>
+                <div
+                    style="padding: 1rem; border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);">
+                    <div class="text-white font-bold" style="font-size: 2.25rem; margin-bottom: 0.5rem;">5+</div>
+                    <div class="text-gray-400">Countries Present</div>
+                </div>
+                <div style="padding: 1rem;">
+                    <div class="text-white font-bold" style="font-size: 2.25rem; margin-bottom: 0.5rem;">3+</div>
+                    <div class="text-gray-400">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="section-py relative z-10">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 5rem;">
+                <h2 class="text-3xl font-bold">Why Brands Choose Zeonify</h2>
+                <p class="text-gray-400 mt-4">Growth isn't an accident. It's engineered.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="glass-card text-center">
+                    <div
+                        style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: rgba(14,165,233,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--color-brand-primary);">
+                        📊
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Data-Driven</h3>
+                    <p class="text-sm text-gray-400">Decisions backed by analytics, not assumption.</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div
+                        style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: rgba(139,92,246,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--color-brand-secondary);">
+                        💰
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">ROI-Focused</h3>
+                    <p class="text-sm text-gray-400">Marketing that pays for itself significantly.</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div
+                        style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: rgba(20,184,166,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--color-brand-accent);">
+                        🌐
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Global Reach</h3>
+                    <p class="text-sm text-gray-400">Experience in India, US, UK, and UAE markets.</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div
+                        style="width: 4rem; height: 4rem; margin: 0 auto 1rem; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">
+                        🤝
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Accountable</h3>
+                    <p class="text-sm text-gray-400">Dedicated managers and transparent reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 8rem 0; text-center: center; position: relative; overflow: hidden; z-index: 10;">
+        <div class="absolute w-full h-full" style="top:0; left:0; background: rgba(14,165,233,0.05);"></div>
+        <div class="container relative z-10" style="text-align: center;">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8" style="margin-bottom: 4rem;">Ready to Build a Presence That
+                Performs?</h2>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="contact.html" class="btn-primary"
+                    style="background: white; color: black; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">Book a Free
+                    Call</a>
+                <a href="#" class="btn-glass">WhatsApp Us</a>
+            </div>
+            <!-- Added spacing for nav bar overlap -->
+            <div style="height: 4rem;"></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-py relative z-10"
+        style="background: rgba(255,255,255,0.02); scroll-margin-top: 6rem;">
+        <div class="container" style="max-width: 48rem;"> <!-- max-w-3xl -->
+            <h2 class="text-3xl font-bold text-center mb-12" style="margin-bottom: 3rem;">Frequently Asked Questions
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                <!-- Left Column (Items 1-5) -->
+                <div class="flex flex-col gap-4">
+                    <!-- 1. Pricing -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            How is your pricing structured?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>Our pricing is based on your business goals, target market, and the scope of services
+                                required.</p>
+                            <p class="mt-2">We don’t believe in one-size-fits-all packages — every strategy is
+                                custom-built for measurable growth.</p>
+                        </div>
+                    </details>
+
+                    <!-- 2. Results Timeline -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            How long does it take to see results?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>Timelines vary by service:</p>
+                            <ul
+                                style="list-style-type: disc; list-style-position: inside; margin-top: 0.5rem; margin-left: 1rem;">
+                                <li>Paid Ads & Lead Generation: 7–14 days</li>
+                                <li>Social Media Growth: 30–90 days</li>
+                                <li>SEO & Organic Growth: 3–6 months</li>
+                            </ul>
+                            <p class="mt-2">We focus on short-term performance and long-term scalability.</p>
+                        </div>
+                    </details>
+
+                    <!-- 3. Guarantee -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            Do you guarantee results?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>We don’t make unrealistic promises or false guarantees.</p>
+                            <p class="mt-2">However, our data-driven strategies, continuous optimization, and
+                                performance-focused execution are designed to deliver the best possible ROI.</p>
+                        </div>
+                    </details>
+
+                    <!-- 4. Contract -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            Is there a minimum contract period?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>No. We offer flexible monthly plans.</p>
+                            <p class="mt-2">Long-term engagements are recommended only for brands looking for
+                                sustainable and scalable growth.</p>
+                        </div>
+                    </details>
+
+                    <!-- 5. Industries -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            Which industries do you work with?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>We work across multiple industries, including:</p>
+                            <ul
+                                style="list-style-type: disc; list-style-position: inside; margin-top: 0.5rem; margin-left: 1rem;">
+                                <li>E-commerce</li>
+                                <li>Real Estate</li>
+                                <li>Coaches & Consultants</li>
+                                <li>Startups & Personal Brands</li>
+                                <li>Local & Service-Based Businesses</li>
+                            </ul>
+                            <p class="mt-2">If your niche is unique, we tailor strategies specifically for your market.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Right Column (Items 6-10) -->
+                <div class="flex flex-col gap-4">
+                    <!-- 6. International -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            How do you work with international clients?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>We collaborate seamlessly through Zoom/Google Meet, shared dashboards, and regular
+                                reporting.</p>
+                            <p class="mt-2">Our team has experience working with clients in India, the US, the UK, and
+                                the UAE.</p>
+                        </div>
+                    </details>
+
+                    <!-- 7. Reporting -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            How do you handle reporting and communication?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>You get:</p>
+                            <ul
+                                style="list-style-type: disc; list-style-position: inside; margin-top: 0.5rem; margin-left: 1rem;">
+                                <li>Weekly or monthly performance reports</li>
+                                <li>Clear KPIs and actionable insights</li>
+                                <li>A dedicated account manager</li>
+                                <li>Complete transparency throughout the process</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- 8. Consultation -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            Is the consultation free?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>Yes ✅</p>
+                            <p class="mt-2">We offer a free strategy consultation to understand your goals and recommend
+                                a clear growth roadmap.</p>
+                        </div>
+                    </details>
+
+                    <!-- 9. Payment -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            What payment methods do you accept?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>We accept:</p>
+                            <ul
+                                style="list-style-type: disc; list-style-position: inside; margin-top: 0.5rem; margin-left: 1rem;">
+                                <li>Bank Transfers</li>
+                                <li>UPI</li>
+                                <li>International Payments (for global clients)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- 10. Getting Started (NEW) -->
+                    <details class="glass-card group">
+                        <summary
+                            class="font-semibold cursor-pointer list-none flex justify-between items-center text-lg">
+                            How do I get started?
+                            <span>↓</span>
+                        </summary>
+                        <div class="text-gray-400 mt-4 text-sm leading-relaxed">
+                            <p>Simply click the "Start Your Project" button or book a free consultation call.</p>
+                            <p class="mt-2">We’ll discuss your goals, analyze your current presence, and create a
+                                tailored growth plan for you.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer relative z-10">
+        <div class="container grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-6">
+                <a href="index.html" class="block">
+                    <img src="/footer_logo.png" alt="Barkhurdar Production" style="width: 8rem;">
+                </a>
+                <p class="footer-link">
+                    Building digital experiences that matter. Innovative solutions for forward-thinking brands.
+                </p>
+                <div class="flex gap-4">
+                    <!-- Social Placeholders -->
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">𝕏</a>
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">in</a>
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">Ig</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="footer-link">Brand Strategy</a></li>
+                    <li><a href="#" class="footer-link">Web Development</a></li>
+                    <li><a href="#" class="footer-link">SEO & Performance</a></li>
+                    <li><a href="#" class="footer-link">Social Media</a></li>
+                    <li><a href="#" class="footer-link">Content Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="footer-title">Company</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="work.html" class="footer-link">Our Work</a></li>
+                    <li><a href="#" class="footer-link">Careers</a></li>
+                    <li><a href="#" class="footer-link">Press</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="footer-title">Stay Updated</h4>
+                <p class="footer-link" style="margin-bottom: 1rem;">Latest insights and industry trends.</p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Enter your email" class="input-field">
+                    <button type="submit" class="btn-submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container"
+            style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-400">&copy; 2026 Barkhurdar Production . All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        const words = [
+            "Performs",
+            "Converts",
+            "Scales",
+            "Engages",
+            "Grows"
+        ];
+
+        let index = 0;
+        const textEl = document.getElementById("changing-text");
+
+        setInterval(() => {
+            textEl.style.opacity = 0;
+
+            setTimeout(() => {
+                index = (index + 1) % words.length;
+                textEl.textContent = words[index];
+                textEl.style.opacity = 1;
+            }, 400);
+
+        }, 3000);
+    </script>
+</body>
+
+</html>

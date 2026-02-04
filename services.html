@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Services | Zeonify</title>
+    <style>
+        html,
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- RIBBON CONTAINER -->
+    <div class="ribbon-container">
+        <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            style="top:0; left:0;">
+            <path id="ribbon-path"
+                d="M-100,0 Q50,200 200,400 T500,800 T800,1200 T200,1600 T-100,2000 T200,2400 T800,2800 T1200,3200 T500,3600 T-100,4000"
+                fill="none" stroke="url(#ribbon-gradient)" stroke-width="20" stroke-linecap="round"
+                style="filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));" />
+            <defs>
+                <linearGradient id="ribbon-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="1" />
+                    <stop offset="25%" stop-color="#8b5cf6" stop-opacity="1" />
+                    <stop offset="50%" stop-color="#ec4899" stop-opacity="1" />
+                    <stop offset="75%" stop-color="#8b5cf6" stop-opacity="1" />
+                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- BACKGROUND GRADIENTS -->
+    <div class="fixed w-full h-full z-10 pointer-events-none" style="top:0; left:0; z-index:-1;">
+        <div class="absolute"
+            style="top:-10%; left:-10%; width:40%; height:40%; background:rgba(14,165,233,0.1); border-radius:50%; filter:blur(120px); animation: pulse-slow 4s infinite;">
+        </div>
+        <div class="absolute"
+            style="bottom:-10%; right:-10%; width:40%; height:40%; background:rgba(139,92,246,0.1); border-radius:50%; filter:blur(120px); animation: pulse-slow 4s infinite;">
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header-wrapper">
+        <!-- Logo LEFT -->
+        <a href="index.html" class="brand-logo-link">
+            <img src="new logo.png" alt="Zeonify" class="brand-logo-img">
+            <span class="brand-logo-text">Zeonify</span>
+        </a>
+
+        <!-- CTA RIGHT -->
+        <a href="contact.html" class="cta-header-link">
+            Get Free Consultation →
+        </a>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar">
+        <div class="w-full h-full flex items-center justify-center">
+            <div class="nav-links no-scrollbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <section class="section-py relative z-10" style="padding-top: 10rem;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 5rem;">
+                <h1 class="text-5xl font-bold mb-6">Our Services</h1>
+                <p class="text-xl text-gray-400">Comprehensive solutions for modern brands.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1. Brand Strategy -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=brand'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>⚡</span>
+                    </div>
+                    <h3 class="card-title">Brand Strategy</h3>
+                    <p class="card-desc">Position your brand to lead the market with clear identity and purpose.</p>
+                    <span class="link-action">View Details →</span>
+                </div>
+
+                <!-- 2. Social Media -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=social'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>📱</span>
+                    </div>
+                    <h3 class="card-title">Social Media</h3>
+                    <p class="card-desc">Data-backed social campaigns that grow communities and drive engagement.</p>
+                    <span class="link-action" style="color:var(--color-brand-secondary);">View Details →</span>
+                </div>
+
+                <!-- 3. Performance Marketing -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=performance'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>📈</span>
+                    </div>
+                    <h3 class="card-title">Performance Marketing</h3>
+                    <p class="card-desc">PPC and Paid Social campaigns optimized for maximum ROAS.</p>
+                    <span class="link-action" style="color:var(--color-brand-accent);">View Details →</span>
+                </div>
+
+                <!-- 4. SEO -->
+                <div class="spotlight-card glass-card group" onclick="window.location.href='service-detail.html?id=seo'"
+                    style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>🔍</span>
+                    </div>
+                    <h3 class="card-title">SEO</h3>
+                    <p class="card-desc">Technical and content-driven strategies to secure top rankings.</p>
+                    <span class="link-action">View Details →</span>
+                </div>
+
+                <!-- 5. Website Dev -->
+                <div class="spotlight-card glass-card group" onclick="window.location.href='service-detail.html?id=web'"
+                    style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>💻</span>
+                    </div>
+                    <h3 class="card-title">Website Development</h3>
+                    <p class="card-desc">Custom developed, high-converting websites built on modern stacks.</p>
+                    <span class="link-action" style="color:var(--color-brand-secondary);">View Details →</span>
+                </div>
+
+                <!-- 6. Video -->
+                <div class="spotlight-card glass-card group"
+                    onclick="window.location.href='service-detail.html?id=video'" style="cursor: pointer;">
+                    <div class="icon-box">
+                        <span>🎥</span>
+                    </div>
+                    <h3 class="card-title">Video Production</h3>
+                    <p class="card-desc">Commercials, explainers, and social shorts produced with cinematic quality.</p>
+                    <span class="link-action" style="color:var(--color-brand-accent);">View Details →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer relative z-10">
+        <div class="container grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-6">
+                <a href="index.html" class="block">
+                    <img src="/footer_logo.png" alt="Barkhurdar Production" style="width: 8rem;">
+                </a>
+                <p class="footer-link">
+                    Building digital experiences that matter. Innovative solutions for forward-thinking brands.
+                </p>
+                <div class="flex gap-4">
+                    <!-- Social Placeholders -->
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">𝕏</a>
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">in</a>
+                    <a href="#"
+                        style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center;">Ig</a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="footer-title">Services</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="footer-link">Brand Strategy</a></li>
+                    <li><a href="#" class="footer-link">Web Development</a></li>
+                    <li><a href="#" class="footer-link">SEO & Performance</a></li>
+                    <li><a href="#" class="footer-link">Social Media</a></li>
+                    <li><a href="#" class="footer-link">Content Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+                <h4 class="footer-title">Company</h4>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="work.html" class="footer-link">Our Work</a></li>
+                    <li><a href="#" class="footer-link">Careers</a></li>
+                    <li><a href="#" class="footer-link">Press</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="footer-title">Stay Updated</h4>
+                <p class="footer-link" style="margin-bottom: 1rem;">Latest insights and industry trends.</p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Enter your email" class="input-field">
+                    <button type="submit" class="btn-submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container"
+            style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-400">&copy; 2026 Barkhurdar Production. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
